@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  node:
+    build: 
+      dockerfile: ./dockerfile
+    container_name: vue
+    stdin_open: true
+    tty: true
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/app
+      
